@@ -18,27 +18,41 @@
     </head>
 
     <body>
+
+        <!-- This is the header for the website, it uses the Bootstrap jumbotron component. -->
         <header class="jumbotron jumbotron-fluid">
             <div class="container header">
                 <h1 class="display-4">Weather Dashboard</h1>
             </div>
         </header>
 
+        <!-- This is the container for the Bootstrap grid -->
         <main class="container">
             <div class="row">
+
+                <!-- This column is for the search bar, submit button, and city list.
+                     It covers 4/12 of the screen on large screens, but 12/12 on smaller screens. -->
                 <div id="cities-col" class="col-lg-4 col-md-12">
+
+                    <!-- This form is for accepting user input and adding to the city list -->
                     <form>
                         <label for="city-search">Search for a city:</label>
                         <br>
+                        <!-- User inputs a city name here -->
                         <input id="city-search" type="text">
+
+                        <!-- User presses this after inputing a city name -->
                         <input id="city-submit" class="btn btn-primary" type="submit">
                     </form>
 
-                    <!-- This is where each added city is stored -->
+                    <!-- This is where each added city is stored. It uses the Bootstrap list-group component. -->
                     <ul id="city-list" class="list-group">
                         
                     </ul>
                 </div>
+
+                <!-- This column is for the current forecast and 5 day forecast.
+                     It covers 8/12 of the screen on large screens, but 12/12 on smaller screens. -->
                 <div id="forecast-col" class="col-lg-8 col-md-12">
                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus luctus ligula ipsum, nec convallis neque placerat id. Maecenas quis sapien sed massa sollicitudin euismod. Ut vestibulum diam cursus tellus porta sollicitudin. Cras quam sem, ullamcorper ut pellentesque et, dignissim quis orci. Fusce vitae ornare lectus, vitae ullamcorper nisl. Ut a felis in ipsum aliquam ultricies eu nec massa. Vestibulum tempus enim nec tortor pretium, at interdum ligula efficitur. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut at felis at urna porttitor aliquam eget in urna. Praesent ultrices massa at diam blandit, nec suscipit tortor lobortis. Etiam a sem id sapien accumsan posuere. Maecenas a interdum mi.</p>
                 </div>
