@@ -10,3 +10,13 @@
 .display-4 {
     font-weight: bold;
 }
+
+#city-search {
+    padding: 5px 0px;
+    line-height: 1.5;
+}
+
+#city-submit {
+    margin-top: -5px;
+    margin-left: -3px;
+}
