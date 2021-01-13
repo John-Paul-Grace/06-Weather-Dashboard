@@ -5,7 +5,7 @@ $(document).ready(function() {
     function addCity(newCity) {
 
         // creates a new element that has the Bootstrap "list-group-item" class
-        var newCityEl = $("<li>").addClass("list-group-item");
+        var newCityEl = $("<button>").addClass("list-group-item");
 
         // makes the parameter string the text of the new element
         newCityEl.text(newCity);
@@ -26,4 +26,11 @@ $(document).ready(function() {
         // runs the addCity() method with the above variable as input
         addCity(userInput);
     });
+
+    // DELETE LATER
+    //=================================================================
+    addCity("Atlanta");
+    addCity("New York");
+    addCity("Los Angeles");
+    //=================================================================
 });
