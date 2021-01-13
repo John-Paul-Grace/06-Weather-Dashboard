@@ -12,11 +12,19 @@
 }
 
 #city-search {
-    padding: 5px 0px;
+    padding: 5px 0;
     line-height: 1.5;
 }
 
 #city-submit {
     margin-top: -5px;
     margin-left: -3px;
+}
+
+#cities-col {
+    background-color: rgb(190, 190, 190);
+}
+
+#city-list {
+    margin: 20px 0;
 }
