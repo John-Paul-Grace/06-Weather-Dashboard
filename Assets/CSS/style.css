@@ -35,7 +35,17 @@
     padding: 5px;
 }
 
+@media only screen and (max-width: 991px) {
+    #current-forecast {
+        margin-top: 10px;
+    }
+}
+
 #forecast-city-header {
     font-weight: bold;
     font-size: large;
+}
+
+#weather-icon {
+    height: 50px;
 }

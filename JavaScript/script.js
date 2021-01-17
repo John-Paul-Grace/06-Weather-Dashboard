@@ -29,28 +29,47 @@ $(document).ready(function() {
         // Ajax call to the OpenWeatherMap API to get current weather.
         $.ajax(ajaxInfo).then(function(response) {
 
+            // Gets unix timestamp from response
             var unixTime = response.dt;
 
+            // Converts unix to milliseconds
             unixTime *= 1000;
 
+            // Uses milliseconds to create a Date object
             var currentDate = new Date(unixTime);
 
+            // Uses Date object methods to create a string in the format "(MM/DD/YYYY)"
             var dateString = "(" + (currentDate.getMonth() + 1) + "/"
                              + currentDate.getDate() + "/"
                              + currentDate.getFullYear() + ")";
 
+            // Gets city name from response
             var cityName = response.name;
+
+            // Concatenates cityName and dateString into one string
+            var forecastHeader = cityName + " " + dateString;
+
+            // Uses icon code from response to create a url for an image
             var iconURL = "http://openweathermap.org/img/wn/" + response.weather[0].icon + "@2x.png";
+
+            // Gets temperature from response
             var temperature = response.main.temp;
+
+            // Gets humidity from response
             var humidity = response.main.humidity;
+
+            // Gets wind speed from response
             var windSpeed = response.wind.speed;
 
-            console.log(cityName);
-            console.log(dateString);
-            console.log(iconURL);
-            console.log(temperature);
-            console.log(humidity);
-            console.log(windSpeed);
+            $("#forecast-city-header").text(forecastHeader);
+
+            $("#weather-icon").attr("src", iconURL);
+
+            $("#temperature").text(temperature);
+
+            $("#humidity").text(humidity);
+
+            $("#wind-speed").text(windSpeed);
 
             console.log(response);
         });
