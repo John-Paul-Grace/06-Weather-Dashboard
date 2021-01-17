@@ -31,6 +31,8 @@ $(document).ready(function() {
 
             // Placeholder text to ensure a successful call.
             console.log(response);
+
+            console.log(response.weather[0].icon)
         });
     }
 
