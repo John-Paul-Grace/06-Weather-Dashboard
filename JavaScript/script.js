@@ -1,6 +1,9 @@
 // jQuery ready method
 $(document).ready(function() {
 
+    // My api key. Listed here for easy changing.
+    var apiKey = "42f36263a8976dc91dd8670541979682";
+
     // addCity() accepts a string as a parameter. It makes a new entry in #city-list for the parameter.
     function addCity(newCity) {
 
@@ -12,6 +15,23 @@ $(document).ready(function() {
 
         // appends the new element to the city list
         $("#city-list").append(newCityEl);
+    }
+
+    // Function that runs an ajax call to get the current weather. Takes a string as a parameter.
+    function currentWeather(city) {
+
+        // Object to be used in the ajax call. URL is concatenated using the parameter string and api key.
+        var ajaxInfo = {
+            url: "api.openweathermap.org/data/2.5/weather?q=" + city + "&appid=" + apiKey,
+            method: "GET"
+        };
+
+        // Ajax call to the OpenWeatherMap API to get current weather.
+        $.ajax(ajaxInfo).then(function(response) {
+
+            // Placeholder text to ensure a successful call.
+            console.log(response);
+        });
     }
 
     // click listener for the #city-submit button
@@ -33,4 +53,7 @@ $(document).ready(function() {
     addCity("New York");
     addCity("Los Angeles");
     //=================================================================
+
+    // Test call for currentWeather().
+    currentWeather("atlanta");
 });
