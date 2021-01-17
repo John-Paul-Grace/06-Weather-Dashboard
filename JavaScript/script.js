@@ -22,7 +22,7 @@ $(document).ready(function() {
 
         // Object to be used in the ajax call. URL is concatenated using the parameter string and api key.
         var ajaxInfo = {
-            url: "api.openweathermap.org/data/2.5/weather?q=" + city + "&appid=" + apiKey,
+            url: "https://api.openweathermap.org/data/2.5/weather?q=" + city + "&appid=" + apiKey,
             method: "GET"
         };
 
