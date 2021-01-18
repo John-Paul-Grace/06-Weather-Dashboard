@@ -46,7 +46,7 @@
     font-size: large;
 }
 
-#weather-icon {
+.weather-icon {
     height: 50px;
 }
 
@@ -57,4 +57,5 @@
     width: 19%;
     margin: 5px 6px 0 0;
     float: left;
+    font-size: small;
 }
