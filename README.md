@@ -22,11 +22,11 @@ SO THAT I can plan a trip accordingly
 
 ## Screenshots
 
-![ScreenShot 1](./assets/Screenshot-1.PNG)
+![Screenshot 1](assets/Screenshot-1.PNG)
 ---
-![ScreenShot 2](./assets/Screenshot-2.PNG)
+![Screenshot 2](assets/Screenshot-2.PNG)
 ---
-![ScreenShot 3](./assets/Screenshot-3.PNG)
+![Screenshot 3](assets/Screenshot-3.PNG)
 
 ## Contributions
 
