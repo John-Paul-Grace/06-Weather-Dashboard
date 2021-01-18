@@ -22,7 +22,7 @@ $(document).ready(function() {
 
         // Object to be used in the ajax call. URL is concatenated using the parameter string and api key.
         var ajaxInfo = {
-            url: "https://api.openweathermap.org/data/2.5/weather?q=" + city + "&appid=" + apiKey,
+            url: "https://api.openweathermap.org/data/2.5/weather?q=" + city + "&units=imperial&appid=" + apiKey,
             method: "GET"
         };
 
@@ -57,13 +57,13 @@ $(document).ready(function() {
             var iconURL = "http://openweathermap.org/img/wn/" + response.weather[0].icon + "@2x.png";
 
             // Gets temperature from response
-            var temperature = response.main.temp;
+            var temperature = response.main.temp + " °F";
 
             // Gets humidity from response
-            var humidity = response.main.humidity;
+            var humidity = response.main.humidity + "%";
 
             // Gets wind speed from response
-            var windSpeed = response.wind.speed;
+            var windSpeed = response.wind.speed + " MPH";
 
             //=============================================================
             // Sets all the appropriate elements using the above data
