@@ -88,13 +88,20 @@ $(document).ready(function() {
         addCity(userInput);
     });
 
+    // click listener for the #city-list which delegates to the specific buttons
+    $("#city-list").on("click", "button", function() {
+
+        // Saves the click button as a jQuery object
+        var cityButton = $(this);
+
+        // Runs the currentWeather() method for the clicked city
+        currentWeather(cityButton.text());
+    });
+
     // DELETE LATER
     //=================================================================
     addCity("Atlanta");
     addCity("New York");
     addCity("Los Angeles");
     //=================================================================
-
-    // Test call for currentWeather().
-    currentWeather("atlanta");
 });
