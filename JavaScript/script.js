@@ -29,6 +29,9 @@ $(document).ready(function() {
         // Ajax call to the OpenWeatherMap API to get current weather.
         $.ajax(ajaxInfo).then(function(response) {
 
+            //===========================================================================
+            // Converts unix timestamp to useable date
+
             // Gets unix timestamp from response
             var unixTime = response.dt;
 
@@ -42,6 +45,7 @@ $(document).ready(function() {
             var dateString = "(" + (currentDate.getMonth() + 1) + "/"
                              + currentDate.getDate() + "/"
                              + currentDate.getFullYear() + ")";
+            //===========================================================================
 
             // Gets city name from response
             var cityName = response.name;
@@ -61,6 +65,8 @@ $(document).ready(function() {
             // Gets wind speed from response
             var windSpeed = response.wind.speed;
 
+            //=============================================================
+            // Sets all the appropriate elements using the above data
             $("#forecast-city-header").text(forecastHeader);
 
             $("#weather-icon").attr("src", iconURL);
@@ -70,6 +76,21 @@ $(document).ready(function() {
             $("#humidity").text(humidity);
 
             $("#wind-speed").text(windSpeed);
+            //=============================================================
+        });
+    }
+
+    // Function that runs an ajax call to get a 5-day forecast. Takes a string as a parameter.
+    function fiveDayForecast(city) {
+
+        // Object to be used in the ajax call. URL is concatenated using the parameter string and api key.
+        var ajaxInfo = {
+            url: "https://api.openweathermap.org/data/2.5/forecast?q=" + city + "&appid=" + apiKey,
+            method: "GET"
+        };
+
+        // Ajax call to the OpenWeatherMap API to get a 5-day forecast.
+        $.ajax(ajaxInfo).then(function(response) {
 
             console.log(response);
         });
@@ -104,4 +125,6 @@ $(document).ready(function() {
     addCity("New York");
     addCity("Los Angeles");
     //=================================================================
+
+    fiveDayForecast("atlanta");
 });
