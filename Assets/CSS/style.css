@@ -49,3 +49,12 @@
 #weather-icon {
     height: 50px;
 }
+
+.extended-forecast {
+    border: 2px solid black;
+    border-radius: 5px;
+    padding: 5px;
+    width: 19%;
+    margin: 5px 6px 0 0;
+    float: left;
+}
