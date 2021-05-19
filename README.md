@@ -1,12 +1,12 @@
-# 06-Weather-Dashboard
+# Weather-Dashboard
 
 ## Application Link
 
-https://john-paul-grace.github.io/06-Weather-Dashboard/
+https://john-paul-grace.github.io/Weather-Dashboard/
 
 ## Repository Link
 
-https://github.com/John-Paul-Grace/06-Weather-Dashboard
+https://github.com/John-Paul-Grace/Weather-Dashboard
 
 ## Description
 
